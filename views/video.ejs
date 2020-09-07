@@ -8,15 +8,16 @@
 </head>
 
 <body>
-    <div class="videoPlayer">
+    <div id="jsVideoPlayer" class="videoPlayer">
         <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"></video>
         <div class="videoPlayerControls">
-            <div class="videoPlayerColumn"><span>볼륨</span></div>
-            <div class="videoPlayerColumn"><span>재생</span></div>
-            <div class="videoPlayerColumn"><span>전체화면</span></div>
+            <div class="videoPlayerColumn"><button type="button">볼륨</button></div>
+            <div class="videoPlayerColumn"><button type="button" id="jsPlayButton">재생</button></div>
+            <div class="videoPlayerColumn"><button type="button">전체화면</button></div>
             <div class="videoPlayerColumn"><span>00:00 / 10:00</span></div>
         </div>
     </div>
+    <script type="text/javascript" src="public/main.js"></script>
 </body>
 
 </html>
