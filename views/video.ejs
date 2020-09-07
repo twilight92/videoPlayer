@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hello World!</title>
+    <title>custom video</title>
     <link rel="stylesheet" type="text/css" href="public/styles.css">
 </head>
 
 <body>
-    <%
-        const video = "video";
-    %>
-    <h1><%= video %></h1>
+    <div class="videoPlayer">
+        <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"></video>
+        <div class="videoPlayerControls">
+            <div class="videoPlayerColumn"><span>볼륨</span></div>
+            <div class="videoPlayerColumn"><span>재생</span></div>
+            <div class="videoPlayerColumn"><span>전체화면</span></div>
+            <div class="videoPlayerColumn"><span>00:00 / 10:00</span></div>
+        </div>
+    </div>
 </body>
 
 </html>
