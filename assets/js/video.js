@@ -26,6 +26,7 @@ function handleVolumeClick() {
 
 function exitFullScreen() {
   fullScrnBtn.innerHTML = '<i class="fas fa-expand">전체화면 종료</i>';
+
   fullScrnBtn.addEventListener('click', goFullScreen);
   if (document.exitFullscreen) {
     document.exitFullscreen();
@@ -36,8 +37,8 @@ function exitFullScreen() {
   } else if (document.msExitFullscreen) {
     document.msExitFullscreen();
   }
-  console.log('exit')
 
+  console.log('exit')
 }
 
 function goFullScreen() {
@@ -50,6 +51,7 @@ function goFullScreen() {
   } else if (videoContainer.msRequestFullscreen) {
     videoContainer.msRequestFullscreen();
   }
+
   fullScrnBtn.innerHTML = '<i class="fas fa-compress">전체화면</i>';
   fullScrnBtn.removeEventListener('click', goFullScreen);
   fullScrnBtn.addEventListener('click', exitFullScreen);
