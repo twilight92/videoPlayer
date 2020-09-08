@@ -30,5 +30,5 @@ function init() {
 }
 
 if (videoContainer) {
-    init();
+  init();
 }
