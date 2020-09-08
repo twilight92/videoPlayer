@@ -27,13 +27,29 @@ function handleVolumeClick() {
 function exitFullScreen() {
   fullScrnBtn.innerHTML = '<i class="fas fa-expand">전체화면 종료</i>';
   fullScrnBtn.addEventListener('click', goFullScreen);
-  document.webkitExitFullscreen();
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
   console.log('exit')
 
 }
 
 function goFullScreen() {
-  videoContainer.webkitRequestFullscreen();
+  if (videoContainer.requestFullscreen) {
+    videoContainer.requestFullscreen();
+  } else if (videoContainer.mozRequestFullScreen) {
+    videoContainer.mozRequestFullScreen();
+  } else if (videoContainer.webkitRequestFullscreen) {
+    videoContainer.webkitRequestFullscreen();
+  } else if (videoContainer.msRequestFullscreen) {
+    videoContainer.msRequestFullscreen();
+  }
   fullScrnBtn.innerHTML = '<i class="fas fa-compress">전체화면</i>';
   fullScrnBtn.removeEventListener('click', goFullScreen);
   fullScrnBtn.addEventListener('click', exitFullScreen);
