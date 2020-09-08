@@ -12,10 +12,20 @@
     <div id="jsVideoPlayer" class="videoPlayer">
         <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"></video>
         <div class="videoPlayerControls">
-            <div class="videoPlayerColumn"><button type="button" id="jsVolumeBtn"><i class="fas fa-volume-mute">소리 끄기</i></button></div>
-            <div class="videoPlayerColumn"><button type="button" id="jsPlayBtn"><i class="fas fa-play">정지</i></button></div>
-            <div class="videoPlayerColumn"><button type="button" id="jsFullScreen"><i class="fas fa-expand">전체화면</i></button></div>
-            <div class="videoPlayerColumn"><span>00:00 / 10:00</span></div>
+            <div class="videoPlayerColumn">
+                <button type="button" id="jsVolumeBtn"><i class="fas fa-volume-mute">소리 끄기</i></button>
+            </div>
+            <div class="videoPlayerColumn">
+                <button type="button" id="jsPlayBtn"><i class="fas fa-play">재생</i></button>
+            </div>
+            <div class="videoPlayerColumn">
+                <button type="button" id="jsFullScreen"><i class="fas fa-expand">전체화면</i></button>
+            </div>
+            <div class="videoPlayerColumn">
+                <span>
+                    <span id="currentTime">00:00</span> / <span id="totalTime">10:00</span>
+                </span>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="public/main.js"></script>
