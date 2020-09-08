@@ -3,6 +3,8 @@ let videoPlayer;
 const playBtn =  document.getElementById('jsPlayBtn');
 const volumeBtn = document.getElementById('jsVolumeBtn');
 const fullScrnBtn = document.getElementById('jsFullScreen');
+const currentTime = document.getElementById("currentTime");
+const totalTime = document.getElementById("totalTime");
 
 function handlePlayClick() {
   if (videoPlayer.paused) {
@@ -60,6 +62,7 @@ function goFullScreen() {
 
 function init() {
   videoPlayer = videoContainer.querySelector('video');
+  console.log(videoPlayer)
   playBtn.addEventListener('click', handlePlayClick);
   volumeBtn.addEventListener('click', handleVolumeClick);
   fullScrnBtn.addEventListener('click', goFullScreen);
