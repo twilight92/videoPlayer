@@ -2,6 +2,7 @@ const videoContainer = document.getElementById('jsVideoPlayer');
 let videoPlayer;
 const playBtn =  document.getElementById('jsPlayBtn');
 const volumeBtn = document.getElementById('jsVolumeBtn');
+const fullScrnBtn = document.getElementById('jsFullScreen');
 
 function handlePlayClick() {
   if (videoPlayer.paused) {
@@ -23,10 +24,27 @@ function handleVolumeClick() {
   }
 }
 
+function exitFullScreen() {
+  fullScrnBtn.innerHTML = '<i class="fas fa-expand">전체화면 종료</i>';
+  fullScrnBtn.addEventListener('click', goFullScreen);
+  document.webkitExitFullscreen();
+  console.log('exit')
+
+}
+
+function goFullScreen() {
+  videoContainer.webkitRequestFullscreen();
+  fullScrnBtn.innerHTML = '<i class="fas fa-compress">전체화면</i>';
+  fullScrnBtn.removeEventListener('click', goFullScreen);
+  fullScrnBtn.addEventListener('click', exitFullScreen);
+  console.log('full')
+}
+
 function init() {
   videoPlayer = videoContainer.querySelector('video');
   playBtn.addEventListener('click', handlePlayClick);
   volumeBtn.addEventListener('click', handleVolumeClick);
+  fullScrnBtn.addEventListener('click', goFullScreen);
 }
 
 if (videoContainer) {
