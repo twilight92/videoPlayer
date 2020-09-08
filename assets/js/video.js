@@ -7,10 +7,10 @@ const fullScrnBtn = document.getElementById('jsFullScreen');
 function handlePlayClick() {
   if (videoPlayer.paused) {
     videoPlayer.play();
-    playBtn.innerHTML = '<i class="fas fa-pause">재생</i>';
+    playBtn.innerHTML = '<i class="fas fa-pause">정지</i>';
   } else {
     videoPlayer.pause();
-    playBtn.innerHTML = '<i class="fas fa-play">정지</i>';
+    playBtn.innerHTML = '<i class="fas fa-play">재생</i>';
   }
 }
 
