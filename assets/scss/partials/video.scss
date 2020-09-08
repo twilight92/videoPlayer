@@ -5,6 +5,10 @@ $red: red;
     width: 500px;
 }
 
+#jsPlayBtn:disabled {
+    display: none;
+}
+
 video {
     width: 100%;
 }
