@@ -88,13 +88,17 @@ function setTotalTime() {
   setInterval(getCurrentTime, 1000);
 }
 
+function handleEnded() {
+  videoPlayer.currentTime = 0;
+}
+
 function init() {
   videoPlayer = videoContainer.querySelector('video');
-  console.log(videoPlayer)
   playBtn.addEventListener('click', handlePlayClick);
   volumeBtn.addEventListener('click', handleVolumeClick);
   fullScrnBtn.addEventListener('click', goFullScreen);
   videoPlayer.addEventListener("loadedmetadata", setTotalTime);
+  videoPlayer.addEventListener("ended", setTotalTime);
 }
 
 if (videoContainer) {
