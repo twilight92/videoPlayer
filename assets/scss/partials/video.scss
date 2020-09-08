@@ -1,7 +1,46 @@
+$grey: #eee;
+$red: red;
+
 #jsVideoPlayer {
     width: 500px;
 }
 
 video {
     width: 100%;
+}
+
+.videoPlayer {
+    &Column {
+        position: relative;
+    }
+
+    &Volume {
+        position: absolute;
+        padding: 0;
+        opacity: 1;
+        top: -60px;
+        left: -25px;
+        transform: rotate(-90deg);
+        z-index: 10;
+        width: 80px;
+
+        input {
+            background-color: rgba(0, 0, 0, 0.7);
+
+            &::-webkit-slider-runnable-track {
+                background-color: $grey;
+                height: 5px;
+            }
+
+            &::-webkit-slider-thumb {
+                all: unset;
+                background-color: $red;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                position: relative;
+                top: -5px;
+            }
+        }
+    }
 }
