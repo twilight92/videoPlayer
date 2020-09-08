@@ -1,7 +1,7 @@
 const videoContainer = document.getElementById('jsVideoPlayer');
 let videoPlayer;
 const playBtn =  document.getElementById('jsPlayBtn');
-const volumeBtn =  document.getElementById('jsVolumeBtn');
+const volumeBtn = document.getElementById('jsVolumeBtn');
 
 function handlePlayClick() {
   if (videoPlayer.paused) {
